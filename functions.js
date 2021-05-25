@@ -257,7 +257,6 @@ const getData = (user) => {
 
     })
     .catch((err) => {
-      console.log(err, err.response, Object.keys(err), Object.keys(err.response));
       loader.classList.add("d-none");
       root.classList.remove("d-none");
 
