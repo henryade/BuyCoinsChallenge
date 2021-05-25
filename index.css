@@ -253,7 +253,6 @@ nav > ul > li:focus {
 .tab-wrapper {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
 }
 
 .tab {
@@ -769,6 +768,10 @@ nav > ul > li:focus {
 
   .d-xs-none {
     display: none !important;
+  }
+
+  .tab-wrapper {
+    overflow-x: scroll;
   }
 
   .tabpanel {
