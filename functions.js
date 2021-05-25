@@ -158,6 +158,7 @@ const FetchRepo = (user) => {
                   description
                   isFork
                   forkCount
+                  url
                   licenseInfo {
                     name
                   }
@@ -200,7 +201,7 @@ const getData = (user) => {
       if(data) {
         const { repositories, name, avatarUrl, login } = data;
   
-        repositories?.nodes.forEach(({ name, parent, primaryLanguage, forkCount, pushedAt, isFork, licenseInfo, description }) => {
+        repositories?.nodes.forEach(({ name, parent, primaryLanguage, forkCount, pushedAt, url, isFork, licenseInfo, description }) => {
           RepositoryItem(
             document.getElementById("repositories"),
             name,
@@ -212,7 +213,8 @@ const getData = (user) => {
             primaryLanguage?.color,
             forkCount + parent?.forkCount || 0,
             licenseInfo?.name,
-            formatTime(new Date(pushedAt))
+            formatTime(new Date(pushedAt)),
+            url
           );
         })
   

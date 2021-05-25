@@ -9,7 +9,8 @@ const RepositoryItem = (
   languageIconColor,
   totalForks,
   license,
-  lastUpdated
+  lastUpdated,
+  repoUrl
 ) => {
   const WrapperDiv = document.createElement("div");
   const LeftSideDiv = document.createElement("div");
@@ -51,7 +52,7 @@ const RepositoryItem = (
   RightSideDiv.classList.add("star-div-wrapper", "d-sm-flex", "items-center-sm");
   RightSideContainerDiv.classList.add("select-div", "star-div", "pointer", "mr-sm-0");
 
-  createAnchor(FirstDivH3, ["repo-name", "link-blue", "no-decoration"], RepoName)
+  createAnchor(FirstDivH3, ["repo-name", "link-blue", "no-decoration"], RepoName, repoUrl)
   FirstDiv.appendChild(FirstDivH3);
   if(isFork) {
     FirstDivSpan.appendChild(FirstDivSpanTextContent);
