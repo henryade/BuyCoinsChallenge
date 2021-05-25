@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/github.ico" />
+    <link rel="stylesheet" href="index.css">
+    <title>Github</title>
+</head>
+<body>
+    <div id="loader" class="d-flex items-center justify-content-center w-100 h-100 min-height-100">
+        <div class="lds-roller" >
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="root" class="d-none">
+        <header>
+            <div class="header">
+                <div class="d-sm-flex flex-auto">
+                    <button class="button-transparent pointer hamburger">
+                        <svg height="24" class="" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg>
+                    </button>
+                </div>
+                <div class="flex-auto">
+                    <div class="github-logo no-decorationn mr-16">
+                        <a href="/">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16 0 0 7.16 0 16C0 23.08 4.58 29.06 10.94 31.18C11.74 31.32 12.04 30.84 12.04 30.42C12.04 30.04 12.02 28.78 12.02 27.44C8 28.18 6.96 26.46 6.64 25.56C6.46 25.1 5.68 23.68 5 23.3C4.44 23 3.64 22.26 4.98 22.24C6.24 22.22 7.14 23.4 7.44 23.88C8.88 26.3 11.18 25.62 12.1 25.2C12.24 24.16 12.66 23.46 13.12 23.06C9.56 22.66 5.84 21.28 5.84 15.16C5.84 13.42 6.46 11.98 7.48 10.86C7.32 10.46 6.76 8.82 7.64 6.62C7.64 6.62 8.98 6.2 12.04 8.26C13.32 7.9 14.68 7.72 16.04 7.72C17.4 7.72 18.76 7.9 20.04 8.26C23.1 6.18 24.44 6.62 24.44 6.62C25.32 8.82 24.76 10.46 24.6 10.86C25.62 11.98 26.24 13.4 26.24 15.16C26.24 21.3 22.5 22.66 18.94 23.06C19.52 23.56 20.02 24.52 20.02 26.02C20.02 28.16 20 29.88 20 30.42C20 30.84 20.3 31.34 21.1 31.18C27.42 29.06 32 23.06 32 16C32 7.16 24.84 0 16 0V0Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mr-16 d-sm-none header-search">
+                        <label for="search" class="search-label">
+                            <input class="search-input" type="text" name="search" autocomplete="off" placeholder="Search or jump to..." id="search" />
+                            <img class="input-img" src="./assets/search-key-slash.svg" alt="search-key-slash">
+                        </label>
+                    </div>
+                    <nav class="d-sm-none">
+                        <ul>
+                            <li class="no-decoration mr-16">Pull <span class="d-lg-none">requests</span></li>
+                            <li class="no-decoration mr-16">Issues</li>
+                            <li class="no-decoration mr-16">Codespaces</li>
+                            <li class="no-decoration mr-16">Marketplace</li>
+                            <li class="no-decoration mr-16">Explore</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="mt-auto">
+                    <div class="notification position-relative pointer mr-16 d-flex items-end">
+                        <div>
+                            <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="">
+                                <path d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"></path><path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path>
+                            </svg>
+                        </div>
+                        <span></span>
+                    </div>
+                    <div class="position-relative plus-sign pointer mr-16 d-flex items-end d-sm-none">
+                        <div>
+                            <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="">
+                                <path fill-rule="evenodd" d="M7.75 2a.75.75 0 01.75.75V7h4.25a.75.75 0 110 1.5H8.5v4.25a.75.75 0 11-1.5 0V8.5H2.75a.75.75 0 010-1.5H7V2.75A.75.75 0 017.75 2z"></path>
+                            </svg>
+                        </div>
+                        <span></span>
+                    </div>
+                    <div class="thumbnail position-relative pointer d-sm-none">
+                        <div>
+                            <img class="avatar" src="./assets/placeholder.png" alt="">
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-dropdown hide flex-column">
+                <div class="w-100 py-16">
+                    <label for="search1" class="search-label">
+                        <input type="text" class="search-input" name="search" placeholder="Search or jump to..." id="search1" autocomplete="off" />
+                        <img src="./assets/search-key-slash.svg" class="input-img" alt="search-key-slash">
+                    </label>
+                </div>
+                <nav class="w-100">
+                    <ul class="flex-column w-100">
+                        <li class="no-decoration">Dashboard</li>
+                        <li class="no-decoration">Pull requests</li>
+                        <li class="no-decoration">Issues</li>
+                        <li class="no-decoration">Marketplace</li>
+                        <li class="no-decoration">Explore</li>
+                        <li class="no-decoration">Codespaces</li>
+                        <li class="no-decoration">Sponsors</li>
+                        <li class="no-decoration">Settings</li>
+                        <li class="no-decoration d-flex">
+                            <div class="thumbnail-icon">
+                                <img src="./assets/placeholder.png" class="avatar" alt="">
+                            </div>
+                            <span class="username pl-5"></span>
+                        </li>
+                        <li class="no-decoration d-flex signout">
+                            <div class="d-inline items-center">
+                                <svg class="v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"></path></svg>
+                            </div>
+                            <span class="pl-5">Sign out</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="show-sm p-16 d-flex flex-column">
+                <div class="d-flex flex-row">
+                    <div class="mr-16">
+                        <img src="./assets/placeholder.png" style="width: 20vw; height: 20vw;" class="avatar dynamic-avatar rounded" alt="">
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <h1 class="fullname dynamic-fullname fullname-text"></h1>
+                        <h2 class="username dynamic-username username-text"></h2>
+                    </div>
+                </div>
+                <div class="pt-16">
+                    <em class="description description-text"></em>
+                </div>
+            </div>
+            <div class="tabpanel mt-24 grid-column-25-75 pl-16 w-100 d-grid position-sticky top px-sm-0">
+                <div>
+                    <div class="flex-row items-center pl-32 py-8 hide d-sm-none" id="top-avatar">
+                        <div class="user-avatar">
+                            <img src="./assets/placeholder.png" width="32" height="32" class="avatar dynamic-avatar rounded" alt="">
+                        </div>
+                        <span class="username dynamic-username pl-5 break-all"></span>
+                    </div>
+                </div>
+                <div class="px-24 px-sm-0">
+                    <ul class="tab-wrapper ">
+                        <li class="tab pointer hoverable no-decoration">
+                            <div class="dim-white-svg d-inline-block valign-sub mr-4">
+                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="d-xs-none hide-sm">
+                                    <path fill-rule="evenodd" d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-hoverable d-inline-block">Overview</span>
+                        </li>
+                        <li class="tab pointer hoverable no-decoration active">
+                            <div class="dim-white-svg d-inline-block valign-sub mr-4">
+                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="d-xs-none hide-sm">
+                                    <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-hoverable d-inline-block">Repositories</span>
+                            <span class="repository-list-badge d-inline-block">0</span>
+                        </li>
+                        <li class="tab pointer hoverable no-decoration">
+                            <div class="dim-white-svg d-inline-block valign-sub mr-4">
+                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="d-xs-none hide-sm">
+                                    <path fill-rule="evenodd" d="M1.75 0A1.75 1.75 0 000 1.75v12.5C0 15.216.784 16 1.75 16h12.5A1.75 1.75 0 0016 14.25V1.75A1.75 1.75 0 0014.25 0H1.75zM1.5 1.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v12.5a.25.25 0 01-.25.25H1.75a.25.25 0 01-.25-.25V1.75zM11.75 3a.75.75 0 00-.75.75v7.5a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75zm-8.25.75a.75.75 0 011.5 0v5.5a.75.75 0 01-1.5 0v-5.5zM8 3a.75.75 0 00-.75.75v3.5a.75.75 0 001.5 0v-3.5A.75.75 0 008 3z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-hoverable d-inline-block">Projects</span>
+                        </li>
+                        <li class="tab pointer hoverable no-decoration">
+                            <div class="dim-white-svg d-inline-block valign-sub mr-4">
+                                <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="d-xs-none hide-sm">
+                                    <path fill-rule="evenodd" d="M8.878.392a1.75 1.75 0 00-1.756 0l-5.25 3.045A1.75 1.75 0 001 4.951v6.098c0 .624.332 1.2.872 1.514l5.25 3.045a1.75 1.75 0 001.756 0l5.25-3.045c.54-.313.872-.89.872-1.514V4.951c0-.624-.332-1.2-.872-1.514L8.878.392zM7.875 1.69a.25.25 0 01.25 0l4.63 2.685L8 7.133 3.245 4.375l4.63-2.685zM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432L2.5 5.677zm6.25 8.271l4.625-2.683a.25.25 0 00.125-.216V5.677L8.75 8.432v5.516z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-hoverable d-inline-block">Packages</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-grid grid-column-25-75 px-32 px-sm-0">
+                <div class="px-16 n-mt-32 d-sm-none">
+                    <div id="user-data-pane">
+                        <div class="avatar-wrapper h-auto rounded overflow position-relative">
+                            <img src="./assets/placeholder.png" class="avatar dynamic-avatar avatar-big w-100 rounded" alt="avatar" />
+                        </div>
+                        <div class="py-16">
+                            <h1 class="fullname dynamic-fullname fullname-text"></h1>
+                            <h2 id="username" class="username dynamic-username username-text"></h2>
+                        </div>
+                    </div>
+                    <div>
+                        <em class="description description-text"></em>
+                    </div>
+                </div>
+                <div class="px-16">
+                    <div class="tab-content hide w-100">
+                        <h1>Overview</h1>
+                    </div>
+                    <div class="tab-content flex-column hide w-100">
+                        <div class="d-flex flex-row w-100 py-16 border-bottom flex-sm-column">
+                            <input type="text" name="" autocomplete="off" placeholder="Find a user(Press enter to search)..." id="userId" class="flex-auto input-field mr-16 mr-sm-0 mb-sm-4">
+                            <div>
+                                <div class="select-div pointer mt-sm-4 mr-sm-0">Type <span class="ml-4 dropdown-icon valign-middle"></span></div>
+                                <div class="select-div pointer mt-sm-4 mr-sm-0">Language<span class="ml-4 dropdown-icon valign-middle"></span></div>
+                                <div class="select-div pointer mt-sm-4 mr-sm-0">Sort<span class="ml-4 dropdown-icon valign-middle"></span></div>
+                            </div>
+                        </div>
+                        <div id="repositories" class="w-100">
+                            <!-- Repositories starts here -->
+                        
+                            <!-- Repositories end here -->
+                        </div>
+                    </div>
+                    <div class="tab-content hide w-100">
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="tab-content hide w-100">
+                        <h1>Packages</h1>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="repository-element.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</html>
