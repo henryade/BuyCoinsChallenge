@@ -1,3 +1,3 @@
 # BuyCoinsChallenge
 
-Git clone
+Github repository page clone
